@@ -13,7 +13,7 @@ export default function Start() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden select-none"
     >
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-2 bg-primary"></div>
@@ -32,9 +32,8 @@ export default function Start() {
         <div className="space-y-8">
           <div className="relative inline-block">
             <div
-              className="absolute -inset-4 -skew-x-12"
+              className="absolute -inset-4 -skew-x-12 bg-red-800"
               style={{
-                background: '#d92323',
                 zIndex: 0,
               }}
             ></div>
@@ -46,10 +45,10 @@ export default function Start() {
           </div>
          
           <div className="space-y-4">
-            <p className="text-xl sm:text-2xl md:text-3xl text-primary tracking-wide text-[#d92323]">
+            <p className="text-xl sm:text-2xl md:text-3xl text- tracking-wide text-red-800 font-bold">
               BEGINNER DEVELOPER
             </p>
-            <p className="text-base sm:text-lg max-w-2xl mx-auto text-[#d92323]">
+            <p className="text-base sm:text-lg max-w-2xl mx-auto text-red-800 font-semibold">
               DOING MY BEST 24/7 TO IMPROVE
             </p>
           </div>
@@ -57,13 +56,13 @@ export default function Start() {
           <div className="flex justify-center items-center pt-8">
             <button
               onClick={scrollToProjects}
-              className="group relative px-8 py-4 overflow-hidden border-2 border-primary"
+              className="group relative px-8 py-4 overflow-hidden border-3 border-red-800 rounded-md -skew-x-12"
               id="view-work-btn"
             >
-              <span className="relative z-10 tracking-wider transition-colors group-hover:text-[#d92323]">
+              <span className=" text-white font-bold relative z-10 tracking-wider transition-colors group-hover:text-black">
                 VIEW WORK
               </span>
-              <span className="absolute inset-0 bg-primary transform -skew-x-12 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+              <span className="absolute inset-0 bg-red-800 transform  scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
             </button>
           </div>
         </div>
@@ -74,7 +73,7 @@ export default function Start() {
           style={{ bottom: 55 }}
           aria-label="View Work"
         >
-          <ArrowDown size={40} className="text-primary animate-bounce" />
+          <ArrowDown size={40} className="text-red-700 animate-bounce" />
         </button>
       </div>
     </section>
