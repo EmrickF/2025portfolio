@@ -14,7 +14,7 @@ const images = [
     alt: "Game character",
     animation: "fromBottom",
     delay: 0,
-    pos: "right-[30%] top-[50%] sm:left-[25%] sm:top-[54%]",
+    pos: "right-[30%] top-[54%] sm:left-[25%] sm:top-[54%]",
   },
 ]
 
@@ -54,7 +54,7 @@ export default function Start() {
             initial="hidden"
             animate="visible"
             transition={{ duration: 0.6, delay: img.delay }}
-            className={`absolute w-120 h-120 md:w-150 md:h-110 ${img.pos} ${img.className || ""}`}
+            className={`absolute w-120 h-120 md:w-150 md:h-110 ${img.pos}}`}
           >
 <div className="relative w-full h-full select-none">
   <div className="absolute inset-0" />
@@ -62,7 +62,7 @@ export default function Start() {
           src={img.src}
          alt={img.alt}
          fill
-         className={`object-contain pointer-events-none relative z-10 ${img.opacity || ""}`}
+         className={`object-contain pointer-events-none relative z-10 `}
          />
       </div>
           </motion.div>
