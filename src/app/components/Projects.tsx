@@ -43,11 +43,11 @@ export default function Projects() {
       link: "https://github.com/EmrickF/DiceGame",
     },
     {
-      title: "Ran Out of Cool Small Projects",
-      description: "To be continued...",
-      image: "",
-      tags: ["...", "...", "..."],
-      link: "",
+      title: "3D skeleton model",
+      description: "I tried to make a cool 3D skeleton model using three.js.",
+      image: "/3dskel.png",
+      tags: ["Three.js", "Vanta", "Typescript"],
+      link: "https://emrickskeleton.vercel.app",
     },
   ];
 
@@ -100,20 +100,14 @@ export default function Projects() {
 
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
-                  {project.link ? (
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-3 bg-white hover:bg-red-700 hover:text-white transition-colors text-red-900 rounded-md font-bold"
-                    >
-                      View on GitHub
-                    </a>
-                  ) : (
-                    <span className="p-3 bg-gray-300 text-gray-700 rounded-md cursor-not-allowed font-bold">
-                      Coming Soon
-                    </span>
-                  )}
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-3 bg-white hover:bg-red-700 hover:text-white transition-colors text-red-900 rounded-md font-bold"
+                  >
+                    {project.link.includes("github") ? "View on GitHub" : "View Website"}
+                  </a>
                 </div>
               </div>
 
